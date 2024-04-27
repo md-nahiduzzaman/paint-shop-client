@@ -21,7 +21,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#07b682] font-bold" : "font-bold"
           }
-          to="/allTouristsSpot,"
+          to="/allTouristsSpot"
         >
           All Tourists Spot
         </NavLink>
