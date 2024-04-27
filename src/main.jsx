@@ -4,9 +4,15 @@ import "./index.css";
 
 import { RouterProvider } from "react-router-dom";
 import router from "./Routes/Routes";
+import FirebaseProvider from "./FirebaseProvider/FirebaseProvider";
+
+import toast, { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FirebaseProvider>
+      <RouterProvider router={router} />
+      <Toaster></Toaster>
+    </FirebaseProvider>
   </React.StrictMode>
 );
