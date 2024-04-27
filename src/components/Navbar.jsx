@@ -21,9 +21,9 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#07b682] font-bold" : "font-bold"
           }
-          to="/about"
+          to="/allTouristsSpot,"
         >
-          About
+          All Tourists Spot
         </NavLink>
       </li>
       <li>
@@ -31,9 +31,9 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#07b682] font-bold" : "font-bold"
           }
-          to="/contact"
+          to="/addTouristsSpot"
         >
-          Contact
+          Add Tourists Spot
         </NavLink>
       </li>
       <li>
@@ -41,60 +41,11 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#07b682] font-bold" : "font-bold"
           }
-          to="/update"
+          to="/myList"
         >
-          Update Profile
+          My List
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "text-[#07b682] font-bold" : "font-bold"
-          }
-          to="/userProfile"
-        >
-          User Profile
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "text-[#07b682] font-bold" : "font-bold"
-          }
-          to="/myCart"
-        >
-          My Cart
-        </NavLink>
-      </li>
-      {/* <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/register">Registration</NavLink>
-      </li> */}
-      {user ? (
-        <>
-          {/* <li>
-            <NavLink to="/update">Update Profile</NavLink>
-          </li> */}
-          {/* <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "text-[#07b682] font-bold" : "font-bold"
-              }
-              to="/userProfile"
-            >
-              User Profile
-            </NavLink>
-          </li> */}
-        </>
-      ) : (
-        ""
-      )}
-
-      {/* <li>
-        <NavLink to="/update">Update Profile</NavLink>
-      </li> */}
     </>
   );
 
@@ -127,7 +78,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="text-2xl font-black">
-            HOMELY
+            TripBD
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -170,47 +121,6 @@ const Navbar = () => {
               </div>
             </>
           )}
-
-          {/* {user && (
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
-              >
-                <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src={user.photoURL}
-                  />
-                </div>
-              </div>
-
-              <ul
-                tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a className="justify-between">
-                    {user.displayName}
-                    <span className="badge">New</span>
-                  </a>
-                </li>
-                <li>
-                  <Link to="/update">Update Profile</Link>
-                </li>
-              </ul>
-            </div>
-          )}
-          {user ? (
-            <button onClick={logout} className="btn">
-              Logout
-            </button>
-          ) : (
-            <Link to="/login">
-              <button className="btn">Logo In</button>
-            </Link>
-          )} */}
         </div>
       </div>
     </div>
