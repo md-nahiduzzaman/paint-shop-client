@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
 
 const UpdateProduct = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const [product, setProduct] = useState({});
   useEffect(() => {
@@ -11,7 +12,7 @@ const UpdateProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
-        console.log(data);
+        // console.log(data);
       });
   }, [id]);
 
@@ -52,7 +53,8 @@ const UpdateProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
+        toast.success("Update Successfully!");
       });
   };
   return (
