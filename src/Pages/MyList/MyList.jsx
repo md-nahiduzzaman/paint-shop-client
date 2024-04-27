@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
   const { user } = useAuth();
@@ -54,7 +55,10 @@ const MyList = () => {
                   <td>{item.country_Name}</td>
                   <td>
                     <div className="flex gap-4">
-                      <button className="btn">Update</button>
+                      <Link to={`/updateProduct/${item._id}`}>
+                        <button className="btn">Update</button>
+                      </Link>
+
                       <button
                         onClick={() => handleDelete(item._id)}
                         className="btn"

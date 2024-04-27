@@ -10,6 +10,7 @@ import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import MyList from "../Pages/MyList/MyList";
 import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/productDetails/:id",
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
       },
