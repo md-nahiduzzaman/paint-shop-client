@@ -3,7 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import SocialLogin from "./SocialLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 // import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
@@ -14,6 +14,7 @@ const Login = () => {
   // navigation
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location);
 
   //hook
   const {
@@ -48,14 +49,6 @@ const Login = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          {/* <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-bold">Login now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-          </div> */}
           <div
             data-aos="zoom-in"
             data-aos-duration="1000"

@@ -1,9 +1,10 @@
+import Banner from "../../components/Banner/Banner";
 import Products from "../Products/Products";
 
 const Home = () => {
   return (
-    <div>
-      <h1>this is home</h1>
+    <div className="container mx-auto">
+      <Banner></Banner>
       <Products></Products>
     </div>
   );

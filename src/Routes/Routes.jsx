@@ -9,6 +9,7 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import MyList from "../Pages/MyList/MyList";
 import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -34,15 +35,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTouristsSpot",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/updateProduct/:id",
-        element: <UpdateProduct></UpdateProduct>,
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myList",
-        element: <MyList></MyList>,
+        element: (
+          <PrivateRoute>
+            <MyList></MyList>
+          </PrivateRoute>
+        ),
       },
     ],
   },
