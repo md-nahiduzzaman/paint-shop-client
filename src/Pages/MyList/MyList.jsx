@@ -18,6 +18,22 @@ const MyList = () => {
       });
   }, [user]);
 
+  const sortData = (sortBy) => {
+    let sortData = [...items];
+    if (sortBy === "customization") {
+      sortData.sort((a, b) => {
+        if (a.customization === "Yes" && b.customization === "No") {
+          return 1;
+        } else if (a.customization === "No" && b.customization === "Yes") {
+          return -1;
+        } else {
+          return 0;
+        }
+      });
+    }
+    setItems(sortData);
+  };
+
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -52,45 +68,66 @@ const MyList = () => {
   };
 
   return (
-    <div>
-      <h1>this is my list</h1>
+    <div className="container mx-auto">
+      {/* section title */}
+      <div className="text-center flex flex-col items-center">
+        <h1 className="text-4xl font-bold w-[40%] mb-6">
+          Explore Our Art Items Collection!
+        </h1>
+        <p className=" w-[60%] mb-10">
+          Unlock endless crafting possibilities with our curated selection of
+          craft items. From paints and brushes to sketch pads and more, we have
+          everything you need to bring your artistic visions to life.
+        </p>
+      </div>
 
-      <div>
-        <div className="overflow-x-auto">
-          <table className="table">
-            {/* head */}
-            <thead>
-              <tr>
-                <th>Spot Name</th>
-                <th>Country Name</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              {items.map((item) => (
-                <tr key={item._id}>
-                  <td>{item.tourists_spot_name}</td>
-                  <td>{item.country_Name}</td>
-                  <td>
-                    <div className="flex gap-4">
-                      <Link to={`/updateProduct/${item._id}`}>
-                        <button className="btn">Update</button>
-                      </Link>
-
-                      <button
-                        onClick={() => handleDelete(item._id)}
-                        className="btn"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* sort function */}
+      <div className="flex text-center items-center justify-center mb-16">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn m-1">
+            Sort by Customization
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a onClick={() => sortData("customization")}>
+                Customization Ascending
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
+
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 ">
+        {items.map((item) => (
+          <div key={item._id} className="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src={item.image} alt="Shoes" />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">{item.item_name}</h2>
+              <div>
+                <p>Price: BDT {item.price} </p>
+                <p>Rating: {item.rating} </p>
+              </div>
+              <div>
+                <p>Customization: {item.customization} </p>
+                <p>Stock Status: {item.stockStatus} </p>
+              </div>
+
+              <div className="card-actions justify-start">
+                <Link to={`/updateProduct/${item._id}`}>
+                  <button className="btn">Update</button>
+                </Link>
+                <button onClick={() => handleDelete(item._id)} className="btn">
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
