@@ -76,7 +76,7 @@ const AddProduct = () => {
         <div className="">
           {/* heading */}
           <div className="mt-8 mb-8">
-            <h1 className="text-center text-4xl font-bold">Add Your product</h1>
+            <h1 className="text-center text-4xl font-bold">Add Your item</h1>
           </div>
           <div className="w-3/4 mx-auto mb-9">
             <form
