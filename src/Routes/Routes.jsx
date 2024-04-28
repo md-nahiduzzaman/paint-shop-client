@@ -11,6 +11,7 @@ import MyList from "../Pages/MyList/MyList";
 import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import AllProducts from "../Pages/AllProducts/AllProducts";
 
 const router = createBrowserRouter([
   {
@@ -30,12 +31,16 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      // {
+      //   path: "/allTouristsSpot",
+      //   element: <AllTouristsSpot></AllTouristsSpot>,
+      // },
       {
-        path: "/allTouristsSpot",
-        element: <AllTouristsSpot></AllTouristsSpot>,
+        path: "/allProducts",
+        element: <AllProducts></AllProducts>,
       },
       {
-        path: "/addTouristsSpot",
+        path: "/addProducts",
         element: (
           <PrivateRoute>
             <AddProduct></AddProduct>

@@ -16,14 +16,24 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink
           className={({ isActive }) =>
             isActive ? "text-[#07b682] font-bold" : "font-bold"
           }
           to="/allTouristsSpot"
         >
-          All Tourists Spot
+          All Art & Craft Items
+        </NavLink>
+      </li> */}
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-[#07b682] font-bold" : "font-bold"
+          }
+          to="/allProducts"
+        >
+          All Art & Craft Items
         </NavLink>
       </li>
       <li>
@@ -31,9 +41,9 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#07b682] font-bold" : "font-bold"
           }
-          to="/addTouristsSpot"
+          to="/addProducts"
         >
-          Add Tourists Spot
+          Add Craft Item
         </NavLink>
       </li>
       <li>
@@ -43,7 +53,7 @@ const Navbar = () => {
           }
           to="/myList"
         >
-          My List
+          My Art & Craft List
         </NavLink>
       </li>
     </>
@@ -78,7 +88,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="text-2xl font-black">
-            TripBD
+            CraftBD
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -98,7 +108,7 @@ const Navbar = () => {
                 <div>
                   <button
                     onClick={logout}
-                    className="btn rounded bg-[#f7cd1b] hover:bg-[#07b682]"
+                    className="btn rounded-2xl bg-[#f7cd1b] hover:bg-[#07b682]"
                   >
                     Logout
                   </button>
@@ -109,12 +119,12 @@ const Navbar = () => {
             <>
               <div className="flex gap-5 ">
                 <Link to="/login">
-                  <button className="btn rounded border-[#f7cd1b] bg-[#f7cf1b17]  hover:bg-[#07b682]">
+                  <button className="btn rounded-2xl border-[#f7cd1b] bg-[#f7cf1b17]  hover:bg-[#07b682]">
                     Sign In
                   </button>
                 </Link>
                 <Link to="/register">
-                  <button className="btn rounded bg-[#f7cd1b] hover:bg-[#07b682]">
+                  <button className="btn rounded-2xl bg-[#f7cd1b] hover:bg-[#07b682]">
                     Sign up
                   </button>
                 </Link>
