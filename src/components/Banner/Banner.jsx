@@ -5,18 +5,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Banner = () => {
+  const [typeEffect] = useTypewriter({
+    words: ["Painting", "Drawing"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
+
   return (
     <div data-aos="zoom-in" data-aos-duration="1000" className="">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <div className="slide slide1">
             <div className="hero-content text-center text-white">
-              <div className="max-w-md">
+              <div className="">
                 <h1 className="text-5xl font-bold">
-                  Explore Painting and Drawing Masterpieces!
+                  Explore Our{" "}
+                  <span className="text-yellow-800">{typeEffect}</span>
                 </h1>
               </div>
             </div>
@@ -25,9 +33,10 @@ const Banner = () => {
         <SwiperSlide>
           <div className="slide slide2">
             <div className="hero-content text-center text-white">
-              <div className="max-w-md">
+              <div className="">
                 <h1 className="text-5xl font-bold">
-                  Dive into the World of Painting and Drawing!
+                  Dive into the World of <br />
+                  <span className="text-yellow-800">{typeEffect}</span>
                 </h1>
               </div>
             </div>
@@ -36,9 +45,10 @@ const Banner = () => {
         <SwiperSlide>
           <div className="slide slide3">
             <div className="hero-content text-center text-white">
-              <div className="max-w-md">
+              <div className="">
                 <h1 className="text-5xl font-bold">
-                  Elevate Your Space with Stunning Artworks
+                  Elevate Your Space with Stunning <br />
+                  <span className="text-yellow-800">{typeEffect}</span>
                 </h1>
               </div>
             </div>
