@@ -243,7 +243,7 @@ const AddProduct = () => {
               <div className="form-control col-span-2 ">
                 <button
                   type="submit"
-                  className="btn rounded-2xl bg-[#f7cd1b] border-none hover:bg-[#07b682] "
+                  className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]"
                 >
                   Add Item
                 </button>

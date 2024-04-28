@@ -24,7 +24,7 @@ const Banner = () => {
               <div className="">
                 <h1 className="text-5xl font-bold">
                   Explore Our{" "}
-                  <span className="text-yellow-800">{typeEffect}</span>
+                  <span className="text-[#f7d7b1]">{typeEffect}</span>
                 </h1>
               </div>
             </div>
@@ -36,7 +36,7 @@ const Banner = () => {
               <div className="">
                 <h1 className="text-5xl font-bold">
                   Dive into the World of <br />
-                  <span className="text-yellow-800">{typeEffect}</span>
+                  <span className="text-[#f7d7b1]">{typeEffect}</span>
                 </h1>
               </div>
             </div>
@@ -48,7 +48,7 @@ const Banner = () => {
               <div className="">
                 <h1 className="text-5xl font-bold">
                   Elevate Your Space with Stunning <br />
-                  <span className="text-yellow-800">{typeEffect}</span>
+                  <span className="text-[#f7d7b1]">{typeEffect}</span>
                 </h1>
               </div>
             </div>

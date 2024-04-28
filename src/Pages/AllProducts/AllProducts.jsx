@@ -46,7 +46,9 @@ const AllProducts = () => {
                     <td>
                       <div className="flex gap-4">
                         <Link to={`/productDetails/${item._id}`}>
-                          <button className="btn">View Details</button>
+                          <button className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]">
+                            View Details
+                          </button>
                         </Link>
                       </div>
                     </td>

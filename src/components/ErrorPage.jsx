@@ -19,7 +19,7 @@ const ErrorPage = () => {
               </p>
 
               <Link to="/">
-                <button className="px-8 py-3 font-semibold btn rounded bg-[#f7cd1b] hover:bg-[#07b682]">
+                <button className="px-8 py-3 font-semibold btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]">
                   Back to homepage
                 </button>
               </Link>

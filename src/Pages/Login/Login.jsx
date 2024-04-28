@@ -57,7 +57,9 @@ const Login = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <div>
-                  <h1 className="text-3xl font-bold text-center">Login</h1>
+                  <h1 className="text-3xl font-bold text-center">
+                    Please Login
+                  </h1>
                 </div>
                 <hr className="mt-6 mb-6" />
                 <label className="label">
@@ -66,7 +68,7 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="email"
-                  className="input input-bordered rounded"
+                  className="input input-bordered rounded-2xl "
                   {...register("email", { required: true })}
                 />
                 {errors.email && (
@@ -82,7 +84,7 @@ const Login = () => {
                   // type={showPassword ? "text" : "password"}
                   type="password"
                   placeholder="password"
-                  className="input input-bordered rounded"
+                  className="input input-bordered rounded-2xl  "
                   {...register("password", { required: true })}
                 />
                 {/* <span
@@ -96,7 +98,7 @@ const Login = () => {
                 )}
               </div>
               <div className="form-control mt-6">
-                <button className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]">
+                <button className="btn rounded-2xl  border-none  text-white bg-[#b18b5e] hover:bg-[#856640]">
                   Login
                 </button>
                 <p className="mt-4">

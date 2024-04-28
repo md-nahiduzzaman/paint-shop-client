@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="bg-neutral text-neutral-content">
+      <div className="bg-neutral text-neutral-content mt-24">
         <div className="container mx-auto">
           <footer className="footer p-10 bg-neutral text-neutral-content">
             <aside>

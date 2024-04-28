@@ -36,11 +36,13 @@ const SubCategoryCard = ({ item }) => {
             <div>
               <p>Price: {price}</p>
               <p>Rating: {rating}</p>
-              <p>processing Time: {processing_time} Days</p>
+              <p>Processing Time: {processing_time} Days</p>
             </div>
             <div className="card-actions justify-start">
               <Link to={`/productDetails/${_id}`}>
-                <button className="btn">View Details</button>
+                <button className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]">
+                  View Details
+                </button>
               </Link>
             </div>
           </div>

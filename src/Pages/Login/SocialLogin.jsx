@@ -27,7 +27,7 @@ const SocialLogin = () => {
       <div className="flex gap-6 items-center justify-center pb-8">
         <div>
           <button
-            className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]"
+            className="btn rounded-2xl  border-none  text-white bg-[#b18b5e] hover:bg-[#856640]"
             onClick={() => handleSocial(googleLogin)}
           >
             <BsGoogle />
@@ -35,7 +35,7 @@ const SocialLogin = () => {
         </div>
         <div>
           <button
-            className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]"
+            className="btn rounded-2xl  border-none  text-white bg-[#b18b5e] hover:bg-[#856640]"
             onClick={() => handleSocial(githubLogin)}
           >
             <BsGithub />

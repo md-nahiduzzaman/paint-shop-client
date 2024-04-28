@@ -10,14 +10,14 @@ const ProductDetails = () => {
   const {
     _id,
     image,
-    tourists_spot_name,
-    country_Name,
-    location,
+    item_name,
+    subcategory_Name,
     short_description,
-    average_cost,
-    seasonality,
-    travel_time,
-    totalVisitorsPerYear,
+    price,
+    rating,
+    customization,
+    processing_time,
+    stockStatus,
     userEmail,
     userName,
   } = product;
@@ -33,27 +33,24 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <h1>this is product details {product._id}</h1>
       <div>
         <div className="container mx-auto">
           <div className="block max-w-sm gap-3 mx-auto sm:max-w-full   dark:bg-gray-50">
             <img
               src={image}
               alt=""
-              className="object-cover w-full  rounded sm:h-[500px] "
+              className="object-cover w-full  rounded-2xl sm:h-[500px] "
             />
             <div className="p-6 space-y-2 mb-10">
               <div className="pb-6">
-                <h1 className="font-bold text-5xl mb-4">
-                  {tourists_spot_name}
-                </h1>
-                <p className="font-semibold text-5xl ">{average_cost}</p>
+                <h1 className="font-bold text-5xl mb-4">{item_name}</h1>
+                <p className="font-semibold text-5xl ">{price} BDT</p>
               </div>
 
               <hr />
 
               <div className="pt-2 pb-2">
-                <h1 className="font-bold">{country_Name}</h1>
+                <h1 className="font-bold">{subcategory_Name}</h1>
               </div>
               <hr />
               <div className="pt-2 pb-2">
@@ -70,23 +67,28 @@ const ProductDetails = () => {
                   <table className="table sm:w-[50%] ">
                     <tbody className="">
                       <tr className="border-none">
-                        <td className="p-0 pb-4">Seasonality:</td>
+                        <td className="p-0 pb-4">Rating:</td>
+                        <td className="p-0 pb-4 font-semibold">{rating}</td>
+                      </tr>
+
+                      <tr className="border-none">
+                        <td className="p-0 pb-4">Customization:</td>
                         <td className="p-0 pb-4 font-semibold">
-                          {seasonality}
+                          {customization}
                         </td>
                       </tr>
 
                       <tr className="border-none">
-                        <td className="p-0 pb-4">Travel Time:</td>
+                        <td className="p-0 pb-4">Processing Time:</td>
                         <td className="p-0 pb-4 font-semibold">
-                          {travel_time}
+                          {processing_time} Days
                         </td>
                       </tr>
 
                       <tr className="border-none">
-                        <td className="p-0 pb-4">Total Visitors Per Year:</td>
+                        <td className="p-0 pb-4">Stock Status:</td>
                         <td className="p-0 pb-4 font-semibold">
-                          {totalVisitorsPerYear}
+                          {stockStatus}
                         </td>
                       </tr>
                     </tbody>

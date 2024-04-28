@@ -66,7 +66,7 @@ const Register = () => {
                 <input
                   type="Text"
                   placeholder="Full Name"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-2xl"
                   {...register("fullName", { required: true })}
                 />
                 {errors.fullName && (
@@ -81,7 +81,7 @@ const Register = () => {
                 <input
                   type="Email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-2xl"
                   {...register("email", { required: true })}
                 />
                 {errors.email && (
@@ -96,7 +96,7 @@ const Register = () => {
                 <input
                   type="text"
                   placeholder="Image url"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-2xl"
                   {...register("image", { required: true })}
                 />
                 {errors.image && (
@@ -113,7 +113,7 @@ const Register = () => {
                   // type={showPassword ? "text" : "password"}
                   type="password"
                   placeholder="Password"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-2xl"
                   {...register("password", {
                     pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/,
                     required: true,
@@ -130,7 +130,7 @@ const Register = () => {
                 )}
               </div>
               <div className="form-control mt-6">
-                <button className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]">
+                <button className="btn rounded-2xl  border-none  text-white bg-[#b18b5e] hover:bg-[#856640]">
                   Register
                 </button>
                 <p className="mt-4">

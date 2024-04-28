@@ -119,9 +119,14 @@ const MyList = () => {
 
               <div className="card-actions justify-start">
                 <Link to={`/updateProduct/${item._id}`}>
-                  <button className="btn">Update</button>
+                  <button className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]">
+                    Update
+                  </button>
                 </Link>
-                <button onClick={() => handleDelete(item._id)} className="btn">
+                <button
+                  onClick={() => handleDelete(item._id)}
+                  className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]"
+                >
                   Delete
                 </button>
               </div>

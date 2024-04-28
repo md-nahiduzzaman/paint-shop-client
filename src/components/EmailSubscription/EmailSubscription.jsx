@@ -23,7 +23,7 @@ const EmailSubscription = () => {
                 />
                 <button
                   type="button"
-                  className="w-2/5 p-3 font-semibold  sm:w-1/3 text-black bg-[#f7cd1b] border-none hover:bg-[#07b682] rounded-2xl"
+                  className="w-2/5 p-3 font-semibold  sm:w-1/3   border-none  btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]"
                 >
                   Subscribe
                 </button>

@@ -236,7 +236,7 @@ const UpdateProduct = () => {
               <div className="form-control col-span-2 mb-9">
                 <button
                   type="submit"
-                  className="btn bg-[#f7cd1b] border-none hover:bg-[#07b682] col-span-2 rounded-2xl"
+                  className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640] col-span-2"
                 >
                   Update
                 </button>
