@@ -16,18 +16,8 @@ const Banner = () => {
             <div className="hero-content text-center text-white">
               <div className="max-w-md">
                 <h1 className="text-5xl font-bold">
-                  Discover Your Dream Home Today
+                  Explore Painting and Drawing Masterpieces!
                 </h1>
-                <p className="py-6">
-                  Explore our extensive listings of exquisite properties in
-                  sought-after locations. From cozy cottages to luxurious
-                  estates, we have the perfect home waiting for you.
-                </p>
-                <Link to="/register">
-                  <button className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]">
-                    Join Now
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
@@ -37,19 +27,8 @@ const Banner = () => {
             <div className="hero-content text-center text-white">
               <div className="max-w-md">
                 <h1 className="text-5xl font-bold">
-                  Invest Wisely in Real Estate
+                  Dive into the World of Painting and Drawing!
                 </h1>
-                <p className="py-6">
-                  Unlock the potential of real estate investment with our expert
-                  guidance and personalized advice. Whether you're a seasoned
-                  investor or a first-time buyer, we're here to help you make
-                  informed decisions and maximize your returns.
-                </p>
-                <Link to="/register">
-                  <button className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]">
-                    Join Now
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
@@ -58,18 +37,9 @@ const Banner = () => {
           <div className="slide slide3">
             <div className="hero-content text-center text-white">
               <div className="max-w-md">
-                <h1 className="text-5xl font-bold">Experience Luxury Living</h1>
-                <p className="py-6">
-                  Indulge in the epitome of luxury living with our exclusive
-                  collection of high-end properties. From waterfront villas to
-                  penthouse suites, immerse yourself in sophistication and
-                  elegance at every turn.
-                </p>
-                <Link to="/register">
-                  <button className="btn rounded bg-[#f7cd1b] border-none hover:bg-[#07b682]">
-                    Join Now
-                  </button>
-                </Link>
+                <h1 className="text-5xl font-bold">
+                  Elevate Your Space with Stunning Artworks
+                </h1>
               </div>
             </div>
           </div>
