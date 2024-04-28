@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Bounce } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
@@ -57,28 +58,30 @@ const Product = ({ product }) => {
           Delete
         </button>
       </div> */}
-      <div>
-        <div className="card bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
-            <img src={image} alt="Shoes" className="rounded-xl" />
-          </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-bold">{item_name}</h2>
-            <h2 className="card-title font-normal">{subcategory_Name}</h2>
-            <hr />
-            <div className="flex items-center justify-between w-full ">
-              <p>Rating: {rating}</p>
-              <p>Price: {price}</p>
-            </div>
-            <hr />
-            <div className="card-actions">
-              <Link to={`/productDetails/${_id}`}>
-                <button className="btn">View Details</button>
-              </Link>
+      <Bounce>
+        <div>
+          <div className="card bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+              <img src={image} alt="Shoes" className="rounded-xl" />
+            </figure>
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-2xl font-bold">{item_name}</h2>
+              <h2 className="card-title font-normal">{subcategory_Name}</h2>
+              <hr />
+              <div className="flex items-center justify-between w-full ">
+                <p>Rating: {rating}</p>
+                <p>Price: {price}</p>
+              </div>
+              <hr />
+              <div className="card-actions">
+                <Link to={`/productDetails/${_id}`}>
+                  <button className="btn">View Details</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Bounce>
     </div>
   );
 };

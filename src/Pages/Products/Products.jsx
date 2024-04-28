@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Product from "../Product/Product";
+import { Bounce } from "react-awesome-reveal";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -26,6 +27,7 @@ const Products = () => {
           everything you need to bring your artistic visions to life.
         </p>
       </div>
+
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 ">
         {products.map((product) => (
           <Product key={product._id} product={product}></Product>

@@ -2,6 +2,19 @@ const Gallery = () => {
   return (
     <>
       <div>
+        {/* section title */}
+        <div className="text-center flex flex-col items-center">
+          <h1 className="text-4xl font-bold w-[40%] mb-6">
+            Explore Our Gallery
+          </h1>
+          <p className=" w-[60%] mb-10">
+            Embark on an enriching journey through our diverse gallery, where
+            each masterpiece tells a unique story of creativity and passion.
+            From captivating paintings to intricate sculptures, immerse yourself
+            in a world of artistry and inspiration.
+          </p>
+        </div>
+
         <section className="py-6  dark:bg-gray-100 text-gray-50 dark:text-gray-900">
           <div className="container grid grid-cols-2 gap-4  mx-auto md:grid-cols-4">
             <img
