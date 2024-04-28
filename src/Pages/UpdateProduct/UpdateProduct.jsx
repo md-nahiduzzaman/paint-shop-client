@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const UpdateProduct = () => {
+  const { user } = useAuth();
+  console.log(user);
+
   const { id } = useParams();
   // console.log(id);
 
@@ -19,29 +23,32 @@ const UpdateProduct = () => {
   const handleUpdateProduct = (e) => {
     e.preventDefault();
     const image = e.target.image.value;
-    const tourists_spot_name = e.target.spot.value;
-    const country_Name = e.target.country.value;
-    const location = e.target.location.value;
-    const short_description = e.target.description.value;
-    const average_cost = e.target.cost.value;
-    const seasonality = e.target.seasonality.value;
-    const travel_time = e.target.time.value;
-    const totalVisitorsPerYear = e.target.visitor.value;
+    const item_name = e.target.itemName.value;
+    const subcategory_Name = e.target.subcategoryName.value;
+
+    const short_description = e.target.shortDescription.value;
+    const price = e.target.price.value;
+    const rating = e.target.rating.value;
+    const customization = e.target.customization.value;
+    const processing_time = e.target.processingTime.value;
+
+    const stockStatus = e.target.stockStatus.value;
+
     const userEmail = e.target.email.value;
     const userName = e.target.name.value;
 
     const info = {
       image,
-      tourists_spot_name,
-      // country_Name,
-      // location,
-      // short_description,
-      // average_cost,
-      // seasonality,
-      // travel_time,
-      // totalVisitorsPerYear,
-      // userEmail,
-      // userName,
+      item_name,
+      subcategory_Name,
+      short_description,
+      price,
+      rating,
+      customization,
+      processing_time,
+      stockStatus,
+      userEmail,
+      userName,
     };
 
     console.log(info);
@@ -82,119 +89,119 @@ const UpdateProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="image"
                   id="image"
-                  defaultValue={product.image}
+                  defaultValue={product?.image}
                 />
               </div>
-              {/* spot name */}
+              {/* item name */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Spot Name</span>
+                  <span className="label-text">Item Name</span>
                 </label>
                 <input
                   type="Text"
-                  placeholder="Spot Name"
+                  placeholder="Item Name"
                   className="input input-bordered rounded-2xl"
-                  name="spot"
-                  id="spot"
-                  defaultValue={product.tourists_spot_name}
+                  name="itemName"
+                  id="itemName"
+                  defaultValue={product?.item_name}
                 />
               </div>
-              {/* country name */}
+              {/* subcategory name */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Country Name</span>
+                  <span className="label-text">Subcategory Name</span>
                 </label>
                 <input
                   type="Text"
-                  placeholder="Country Name"
+                  placeholder="Subcategory Name"
                   className="input input-bordered rounded-2xl"
-                  name="country"
-                  id="country"
-                  defaultValue={product.country_Name}
-                />
-              </div>
-              {/* location */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Location</span>
-                </label>
-                <input
-                  type="Text"
-                  placeholder="Location"
-                  className="input input-bordered rounded-2xl"
-                  name="location"
-                  id="location"
-                  defaultValue={product.location}
+                  name="subcategoryName"
+                  id="subcategoryName"
+                  defaultValue={product?.subcategory_Name}
                 />
               </div>
               {/* description */}
-              <div className="form-control col-span-2">
+              <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Description</span>
+                  <span className="label-text">Short Description</span>
                 </label>
                 <input
                   type="Text"
-                  placeholder="Description"
-                  className="input input-bordered  rounded-2xl"
-                  name="description"
-                  id="description"
-                  defaultValue={product.short_description}
+                  placeholder="Short Description"
+                  className="input input-bordered col-span-2 rounded-2xl"
+                  name="shortDescription"
+                  id="shortDescription"
+                  defaultValue={product?.short_description}
                 />
               </div>
-              {/* cost */}
+              {/* price */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Average Cost</span>
+                  <span className="label-text">Price</span>
                 </label>
                 <input
                   type="number"
-                  placeholder="Average Cost"
+                  placeholder="Price"
                   className="input input-bordered rounded-2xl"
-                  name="cost"
-                  id="cost"
-                  defaultValue={product.average_cost}
+                  name="price"
+                  id="price"
+                  defaultValue={product?.price}
                 />
               </div>
-              {/* seasonality */}
+              {/* rating */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Seasonality</span>
-                </label>
-                <input
-                  type="Text"
-                  placeholder="Seasonality"
-                  className="input input-bordered rounded-2xl"
-                  name="seasonality"
-                  id="seasonality"
-                  defaultValue={product.seasonality}
-                />
-              </div>
-              {/* travel time */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Travel Time</span>
+                  <span className="label-text">Rating</span>
                 </label>
                 <input
                   type="number"
-                  placeholder="Travel Time"
+                  placeholder="Rating"
                   className="input input-bordered rounded-2xl"
-                  name="time"
-                  id="time"
-                  defaultValue={product.travel_time}
+                  name="rating"
+                  id="rating"
+                  defaultValue={product?.rating}
                 />
               </div>
-              {/* visitor */}
+              {/* customization */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Total Visitors Per Year</span>
+                  <span className="label-text">Customization</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Customization (Yes/No)"
+                  className="input input-bordered rounded-2xl"
+                  name="customization"
+                  id="customization"
+                  defaultValue={product?.customization}
+                />
+              </div>
+              {/* processing time */}
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Processing Time</span>
                 </label>
                 <input
                   type="number"
-                  placeholder="Total Visitors Per Year"
+                  placeholder="Processing Time"
                   className="input input-bordered rounded-2xl"
-                  name="visitor"
-                  id="visitor"
-                  defaultValue={product.totalVisitorsPerYear}
+                  name="processingTime"
+                  id="processingTime"
+                  defaultValue={product?.processing_time}
+                />
+              </div>
+              {/* stock Status  */}
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Stock Status </span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Stock Status (In Stock / Made to Order) "
+                  className="input input-bordered rounded-2xl"
+                  name="stockStatus"
+                  id="stockStatus"
+                  defaultValue={product?.stockStatus}
                 />
               </div>
               {/* email */}
@@ -208,7 +215,7 @@ const UpdateProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="email"
                   id="email"
-                  defaultValue={product.userEmail}
+                  defaultValue={user?.email}
                 />
               </div>
               {/* name */}
@@ -222,7 +229,7 @@ const UpdateProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="name"
                   id="name"
-                  defaultValue={product.country_Name}
+                  defaultValue={user?.displayName}
                 />
               </div>
               {/* btn */}

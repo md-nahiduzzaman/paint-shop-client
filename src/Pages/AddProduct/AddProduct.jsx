@@ -133,19 +133,6 @@ const AddProduct = () => {
                   id="subcategoryName"
                 />
               </div>
-              {/* location */}
-              {/* <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Location</span>
-                </label>
-                <input
-                  type="Text"
-                  placeholder="Location"
-                  className="input input-bordered rounded-2xl"
-                  name="location"
-                  id="location"
-                />
-              </div> */}
               {/* description */}
               <div className="form-control">
                 <label className="label">
