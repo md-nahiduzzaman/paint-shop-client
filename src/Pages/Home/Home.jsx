@@ -2,6 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import EmailSubscription from "../../components/EmailSubscription/EmailSubscription";
 import Gallery from "../../components/Gallery/Gallery";
 import Countries from "../Countries/Countries";
+import ArtCategories from "../ArtCategories/ArtCategories";
 
 import Products from "../Products/Products";
 
@@ -12,17 +13,19 @@ const Home = () => {
         <Banner></Banner>
       </div>
 
-      <Products></Products>
+      <div className="pt-28 ">
+        <Products></Products>
+      </div>
 
-      <div className="mb-12">
+      <div className="pt-28 mb-12">
         <EmailSubscription></EmailSubscription>
       </div>
 
-      <div className="mb-12">
-        <Countries></Countries>
+      <div className="pt-28 mb-12">
+        <ArtCategories></ArtCategories>
       </div>
 
-      <div className="mb-12">
+      <div className="pt-28 mb-12">
         <Gallery></Gallery>
       </div>
     </div>

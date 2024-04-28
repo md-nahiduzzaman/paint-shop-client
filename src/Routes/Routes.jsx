@@ -12,6 +12,7 @@ import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import AllProducts from "../Pages/AllProducts/AllProducts";
+import CategoryDetails from "../Pages/CategoryDetails/CategoryDetails";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/categoryDetails/:subCategory",
+        element: <CategoryDetails></CategoryDetails>,
       },
       {
         path: "/myList",

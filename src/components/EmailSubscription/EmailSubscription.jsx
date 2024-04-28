@@ -3,18 +3,18 @@ const EmailSubscription = () => {
     <>
       <div className="container mx-auto ">
         <div
-          className="hero h-[30vh]"
+          className="hero h-[40vh]"
           style={{
             backgroundImage:
-              "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+              "url(https://images.unsplash.com/photo-1579167728952-4b541b70767c?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
             borderRadius: "24px",
           }}
         >
           <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
           <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Get Our Updates</h1>
-              <p className="mb-5">Find out about events and other news</p>
+            <div className="">
+              <h1 className="text-6xl font-bold mb-8">Get Our Updates</h1>
+
               <div className="flex flex-row gap-2">
                 <input
                   type="text"
