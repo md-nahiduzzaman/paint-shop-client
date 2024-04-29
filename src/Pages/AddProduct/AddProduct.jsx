@@ -82,7 +82,7 @@ const AddProduct = () => {
   };
 
   useEffect(() => {
-    document.title = "CraftBD | Add Item";
+    document.title = "PaintShop | Add Item";
   }, []);
 
   return (

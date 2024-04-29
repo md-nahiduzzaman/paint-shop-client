@@ -19,7 +19,7 @@ const CategoryDetails = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "CraftBD | Product Details";
+    document.title = "PaintShop | Product Details";
   }, []);
 
   return (

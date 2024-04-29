@@ -70,7 +70,7 @@ const MyList = () => {
   };
 
   useEffect(() => {
-    document.title = "CraftBD | My Art & Carft";
+    document.title = "PaintShop | My Art & Carft";
   }, []);
 
   return (

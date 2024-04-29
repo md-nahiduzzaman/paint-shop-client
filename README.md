@@ -1,10 +1,10 @@
 # B9 A10 Type-02 Requirements
 
-## Website name: CraftBD
+## Website name: PaintShop
 
 ### Live url: https://tripbd-react.web.app/
 
-Welcome to CraftBD, your go-to destination for all your crafting needs! Visit our website [here](https://www.craftbd.com)
+Welcome to PaintShop, your go-to destination for all your crafting needs! Visit our website [here](https://www.PaintShop.com)
 
 ## Features:
 
@@ -14,4 +14,4 @@ Welcome to CraftBD, your go-to destination for all your crafting needs! Visit ou
 - **Community Connection**: Join our thriving community of crafters, where you can share ideas, seek advice, and showcase your latest masterpieces.
 - **Effortless Shopping**: Enjoy a seamless shopping experience with intuitive navigation, secure checkout, and prompt delivery to your doorstep.
 
-CraftBD is your partner in crafting adventures, where imagination knows no bounds!
+PaintShop is your partner in crafting adventures, where imagination knows no bounds!

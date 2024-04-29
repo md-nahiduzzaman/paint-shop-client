@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    document.title = "CraftBD | Login";
+    document.title = "PaintShop | Login";
   }, []);
 
   return (

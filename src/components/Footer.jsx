@@ -5,10 +5,10 @@ const Footer = () => {
         <div className="container mx-auto">
           <footer className="footer p-10 bg-neutral text-neutral-content">
             <aside>
-              <h1 className="text-4xl font-bold">CraftBD</h1>
+              <h1 className="text-4xl font-bold">PaintShop</h1>
               <hr />
               <p>
-                CraftBD Industries Ltd.
+                PaintShop Industries Ltd.
                 <br />
                 321 Elm Street, Springfield, <br />
                 email@example.com <br />

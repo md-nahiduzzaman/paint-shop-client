@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   useEffect(() => {
-    document.title = "CraftBD | Register";
+    document.title = "PaintShop | Register";
   }, []);
 
   return (

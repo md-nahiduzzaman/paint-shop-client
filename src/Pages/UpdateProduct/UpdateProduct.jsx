@@ -66,7 +66,7 @@ const UpdateProduct = () => {
   };
 
   useEffect(() => {
-    document.title = "CraftBD | Update Product";
+    document.title = "PaintShop | Update Product";
   }, []);
 
   return (

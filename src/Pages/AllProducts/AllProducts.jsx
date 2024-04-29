@@ -15,7 +15,7 @@ const AllProducts = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "CraftBD | All Product";
+    document.title = "PaintShop | All Product";
   }, []);
 
   if (loading) {

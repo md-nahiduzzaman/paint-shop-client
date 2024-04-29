@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 const Home = () => {
   useEffect(() => {
-    document.title = "CraftBD | Home";
+    document.title = "PaintShop | Home";
   }, []);
 
   return (
