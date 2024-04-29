@@ -19,7 +19,7 @@ const SubCategoryCard = ({ item }) => {
   return (
     <div className="container mx-auto">
       <div>
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure>
             <img
               className="sm:h-[350px] p-6 bg-cover"

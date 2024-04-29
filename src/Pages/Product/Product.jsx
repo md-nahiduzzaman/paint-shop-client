@@ -68,9 +68,8 @@ const Product = ({ product }) => {
               <h2 className="card-title text-2xl font-bold">{item_name}</h2>
               <h2 className="card-title font-normal">{subcategory_Name}</h2>
               <hr />
-              <div className="flex items-center justify-between w-full ">
-                <p>Rating: {rating}</p>
-                <p>Price: {price}</p>
+              <div className="flex items-center gap-7 w-full ">
+                <p>Price: {price} BDT</p>
               </div>
               <hr />
               <div className="card-actions">

@@ -4,10 +4,10 @@ const Gallery = () => {
       <div>
         {/* section title */}
         <div className="text-center flex flex-col items-center">
-          <h1 className="text-4xl font-bold w-[40%] mb-6">
+          <h1 className="text-4xl font-bold sm:w-[40%] mb-6">
             Explore Our Gallery
           </h1>
-          <p className=" w-[60%] mb-10">
+          <p className=" sm:w-[60%] mb-10">
             Embark on an enriching journey through our diverse gallery, where
             each masterpiece tells a unique story of creativity and passion.
             From captivating paintings to intricate sculptures, immerse yourself

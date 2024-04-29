@@ -18,10 +18,10 @@ const Products = () => {
     <div>
       {/* section title */}
       <div className="text-center flex flex-col items-center">
-        <h1 className="text-4xl font-bold w-[40%] mb-6">
+        <h1 className="text-4xl font-bold sm:w-[40%] mb-6">
           Explore Our Art Items Collection!
         </h1>
-        <p className=" w-[60%] mb-10">
+        <p className=" sm:w-[60%] mb-10">
           Unlock endless crafting possibilities with our curated selection of
           craft items. From paints and brushes to sketch pads and more, we have
           everything you need to bring your artistic visions to life.

@@ -5,11 +5,19 @@ const Footer = () => {
         <div className="container mx-auto">
           <footer className="footer p-10 bg-neutral text-neutral-content">
             <aside>
+              <h1 className="text-4xl font-bold">CraftBD</h1>
+              <hr />
               <p>
-                ACME Industries Ltd.
+                CraftBD Industries Ltd.
                 <br />
-                Copyright © 2024 - All right reserved by ACME Industries Ltd
+                321 Elm Street, Springfield, <br />
+                email@example.com <br />
+                555-123-4567
               </p>
+              <hr />
+              <div className="">
+                <p> Copyright © 2024 - All right reserved </p>
+              </div>
             </aside>
             <nav>
               <h6 className="footer-title">Social</h6>

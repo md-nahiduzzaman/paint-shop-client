@@ -86,13 +86,13 @@ const AddProduct = () => {
         <div className="">
           {/* heading */}
           <div className="mt-8 mb-8">
-            <h1 className="text-center text-4xl font-bold">Add Your item</h1>
+            <h1 className="text-center text-4xl font-bold">Add Your Item</h1>
           </div>
           <div className="w-3/4 mx-auto mb-9">
             <form
               onSubmit={handleAddProduct}
               action=""
-              className="grid grid-cols-2 gap-7"
+              className="sm:grid sm:grid-cols-2 sm:gap-6 "
             >
               {/* img url */}
               <div className="form-control">
@@ -240,7 +240,7 @@ const AddProduct = () => {
                 />
               </div>
               {/* btn */}
-              <div className="form-control col-span-2 ">
+              <div className="form-control col-span-2 mt-7 ">
                 <button
                   type="submit"
                   className="btn rounded-2xl text-white bg-[#b18b5e] hover:bg-[#856640]"

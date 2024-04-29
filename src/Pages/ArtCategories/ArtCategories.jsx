@@ -15,6 +15,14 @@ const ArtCategories = () => {
 
   return (
     <div>
+      <div>
+        {/* section title */}
+        <div className="text-center flex flex-col items-center">
+          <h1 className="text-4xl font-bold sm:w-[40%] mb-14">
+            Our Product Categories
+          </h1>
+        </div>
+      </div>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 ">
         {categories.map((category) => (
           <SingleCategory

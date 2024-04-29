@@ -22,9 +22,10 @@ const CategoryDetails = () => {
     <div className="container mx-auto">
       {/* section title */}
       <div className="text-center flex flex-col items-center">
-        <h1 className="text-4xl font-bold w-[40%] mb-6">
+        <h1 className="text-4xl font-bold  lg:w-[40%] md:w-[70%] mb-6">
           Welcome to: {subCategory} Collection
         </h1>
+        <p>Item Found: {items.length}</p>
       </div>
       {/* cards */}
       <div className=" ">

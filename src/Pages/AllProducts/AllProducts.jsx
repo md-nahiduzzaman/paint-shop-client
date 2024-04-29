@@ -16,13 +16,13 @@ const AllProducts = () => {
     <div className="container mx-auto">
       {/* section title */}
       <div className="text-center flex flex-col items-center">
-        <h1 className="text-4xl font-bold w-[40%] mb-6">
+        <h1 className="text-4xl font-bold sm:w-[40%] mb-6">
           Explore Painting and Drawing Masterpieces!
         </h1>
       </div>
 
       <div>
-        <div>
+        <div className="">
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
@@ -31,7 +31,7 @@ const AllProducts = () => {
                   <th>Name</th>
                   <th>Sub Category</th>
                   <th>Price</th>
-                  <th>Stock Status</th>
+                  {/* <th>Stock Status</th> */}
                   <th>Action</th>
                 </tr>
               </thead>
@@ -41,8 +41,8 @@ const AllProducts = () => {
                   <tr key={item._id}>
                     <td>{item.item_name}</td>
                     <td>{item.subcategory_Name}</td>
-                    <td>{item.price}</td>
-                    <td>{item.stockStatus}</td>
+                    <td>{item.price} BDT</td>
+                    {/* <td>{item.stockStatus}</td> */}
                     <td>
                       <div className="flex gap-4">
                         <Link to={`/productDetails/${item._id}`}>
