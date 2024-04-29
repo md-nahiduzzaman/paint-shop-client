@@ -6,7 +6,7 @@ const Countries = () => {
   // console.log(products);
 
   useEffect(() => {
-    fetch("http://localhost:5000/countries")
+    fetch("https://tripbd-server.vercel.app/countries")
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);

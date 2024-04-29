@@ -23,7 +23,7 @@ const ProductDetails = () => {
   } = product;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/productDetails/${id}`)
+    fetch(`https://tripbd-server.vercel.app/productDetails/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);

@@ -12,7 +12,7 @@ const UpdateProduct = () => {
 
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/updateProduct/${id}`)
+    fetch(`https://tripbd-server.vercel.app/updateProduct/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -53,7 +53,7 @@ const UpdateProduct = () => {
 
     console.log(info);
 
-    fetch(`http://localhost:5000/updateProduct/${id}`, {
+    fetch(`https://tripbd-server.vercel.app/updateProduct/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),
@@ -210,7 +210,7 @@ const UpdateProduct = () => {
                 />
               </div>
               {/* email */}
-              <div className="form-control">
+              {/* <div className="form-control">
                 <label className="label">
                   <span className="label-text">User Email</span>
                 </label>
@@ -222,9 +222,9 @@ const UpdateProduct = () => {
                   id="email"
                   defaultValue={user?.email}
                 />
-              </div>
+              </div> */}
               {/* name */}
-              <div className="form-control">
+              {/* <div className="form-control">
                 <label className="label">
                   <span className="label-text">User Name</span>
                 </label>
@@ -236,7 +236,7 @@ const UpdateProduct = () => {
                   id="name"
                   defaultValue={user?.displayName}
                 />
-              </div>
+              </div> */}
               {/* btn */}
               <div className="form-control col-span-2 mb-9">
                 <button

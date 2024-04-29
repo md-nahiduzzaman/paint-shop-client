@@ -10,7 +10,7 @@ const MyList = () => {
   // const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myProduct/${user?.userEmail}`)
+    fetch(`https://tripbd-server.vercel.app/myProduct/${user?.userEmail}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -45,7 +45,7 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://tripbd-server.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

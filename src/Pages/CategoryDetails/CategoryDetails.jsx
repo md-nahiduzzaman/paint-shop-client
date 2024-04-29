@@ -10,7 +10,7 @@ const CategoryDetails = () => {
   console.log(items);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${subCategory}`)
+    fetch(`https://tripbd-server.vercel.app/product/${subCategory}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

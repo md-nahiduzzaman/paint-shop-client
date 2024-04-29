@@ -5,7 +5,7 @@ const AllProducts = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://tripbd-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
