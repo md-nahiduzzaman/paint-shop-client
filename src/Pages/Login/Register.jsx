@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   useEffect(() => {
-    document.title = "Homely | Register";
+    document.title = "CraftBD | Register";
   }, []);
 
   return (

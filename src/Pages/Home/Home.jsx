@@ -5,8 +5,13 @@ import Countries from "../Countries/Countries";
 import ArtCategories from "../ArtCategories/ArtCategories";
 
 import Products from "../Products/Products";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "CraftBD | Home";
+  }, []);
+
   return (
     <div className="container mx-auto">
       <div>

@@ -64,6 +64,11 @@ const UpdateProduct = () => {
         toast.success("Update Successfully!");
       });
   };
+
+  useEffect(() => {
+    document.title = "CraftBD | Update Product";
+  }, []);
+
   return (
     <>
       <div className="container mx-auto">

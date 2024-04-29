@@ -31,6 +31,10 @@ const ProductDetails = () => {
       });
   }, []);
 
+  useEffect(() => {
+    document.title = "CraftBD | Product Details";
+  }, []);
+
   return (
     <div>
       <div>

@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
+import { useEffect } from "react";
 
 const AddProduct = () => {
   const { user } = useAuth();
@@ -79,6 +80,10 @@ const AddProduct = () => {
         toast.success("Add item Successfully!");
       });
   };
+
+  useEffect(() => {
+    document.title = "CraftBD | Add Item";
+  }, []);
 
   return (
     <>

@@ -67,6 +67,10 @@ const MyList = () => {
     });
   };
 
+  useEffect(() => {
+    document.title = "CraftBD | My Art & Carft";
+  }, []);
+
   return (
     <div className="container mx-auto">
       {/* section title */}

@@ -12,6 +12,10 @@ const AllProducts = () => {
       });
   }, []);
 
+  useEffect(() => {
+    document.title = "CraftBD | All Product";
+  }, []);
+
   return (
     <div className="container mx-auto">
       {/* section title */}

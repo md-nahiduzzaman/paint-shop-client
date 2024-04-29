@@ -18,6 +18,10 @@ const CategoryDetails = () => {
       });
   }, []);
 
+  useEffect(() => {
+    document.title = "CraftBD | Product Details";
+  }, []);
+
   return (
     <div className="container mx-auto">
       {/* section title */}
