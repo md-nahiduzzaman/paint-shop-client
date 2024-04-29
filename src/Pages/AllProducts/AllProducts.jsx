@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const AllProducts = () => {
+  const { loading } = useAuth();
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -15,6 +17,10 @@ const AllProducts = () => {
   useEffect(() => {
     document.title = "CraftBD | All Product";
   }, []);
+
+  if (loading) {
+    return <span className="loading loading-spinner loading-lg"></span>;
+  }
 
   return (
     <div className="container mx-auto">

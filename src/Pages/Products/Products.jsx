@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import { Bounce } from "react-awesome-reveal";
+import useAuth from "../../hooks/useAuth";
 
 const Products = () => {
+  const { loading } = useAuth();
   const [products, setProducts] = useState([]);
   console.log(products);
 
@@ -13,6 +15,10 @@ const Products = () => {
         setProducts(data);
       });
   }, []);
+
+  if (loading) {
+    return <span className="loading loading-spinner loading-lg"></span>;
+  }
 
   return (
     <div>

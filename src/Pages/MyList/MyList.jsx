@@ -6,11 +6,13 @@ import Swal from "sweetalert2";
 const MyList = () => {
   const { user } = useAuth();
   console.log(user);
+  console.log(user.email);
   const [items, setItems] = useState([]);
+  console.log(items);
   // const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`https://tripbd-server.vercel.app/myProduct/${user?.userEmail}`)
+    fetch(`https://tripbd-server.vercel.app/myProduct/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

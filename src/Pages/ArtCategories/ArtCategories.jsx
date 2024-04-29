@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import SingleCategory from "../SingleCategory/SingleCategory";
+import useAuth from "../../hooks/useAuth";
 
 const ArtCategories = () => {
+  const { loading } = useAuth();
   const [categories, setCategories] = useState([]);
   // console.log(products);
 
@@ -12,6 +14,10 @@ const ArtCategories = () => {
         setCategories(data);
       });
   }, []);
+
+  if (loading) {
+    return <span className="loading loading-spinner loading-lg"></span>;
+  }
 
   return (
     <div>
