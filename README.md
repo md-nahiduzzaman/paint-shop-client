@@ -1,8 +1,10 @@
-# CraftBD
+# B9 A10 Type-02 Requirements
+
+## Website name: CraftBD
+
+### Live url: https://tripbd-react.web.app/
 
 Welcome to CraftBD, your go-to destination for all your crafting needs! Visit our website [here](https://www.craftbd.com)
-
-Live url: https://tripbd-react.web.app/
 
 ## Features:
 
