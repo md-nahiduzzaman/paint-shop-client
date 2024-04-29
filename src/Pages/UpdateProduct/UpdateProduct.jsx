@@ -34,8 +34,8 @@ const UpdateProduct = () => {
 
     const stockStatus = e.target.stockStatus.value;
 
-    const userEmail = e.target.email.value;
-    const userName = e.target.name.value;
+    // const userEmail = e.target.email.value;
+    // const userName = e.target.name.value;
 
     const info = {
       image,
@@ -47,8 +47,8 @@ const UpdateProduct = () => {
       customization,
       processing_time,
       stockStatus,
-      userEmail,
-      userName,
+      // userEmail,
+      // userName,
     };
 
     console.log(info);
