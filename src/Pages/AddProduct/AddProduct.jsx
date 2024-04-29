@@ -110,6 +110,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="image"
                   id="image"
+                  required="true"
                 />
               </div>
               {/* item name */}
@@ -123,6 +124,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="itemName"
                   id="itemName"
+                  required="true"
                 />
               </div>
               {/* subcategory name */}
@@ -136,6 +138,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="subcategoryName"
                   id="subcategoryName"
+                  required="true"
                 />
               </div>
               {/* description */}
@@ -149,6 +152,7 @@ const AddProduct = () => {
                   className="input input-bordered col-span-2 rounded-2xl"
                   name="shortDescription"
                   id="shortDescription"
+                  required="true"
                 />
               </div>
               {/* price */}
@@ -162,6 +166,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="price"
                   id="price"
+                  required="true"
                 />
               </div>
               {/* rating */}
@@ -175,6 +180,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="rating"
                   id="rating"
+                  required="true"
                 />
               </div>
               {/* customization */}
@@ -188,6 +194,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="customization"
                   id="customization"
+                  required="true"
                 />
               </div>
               {/* processing time */}
@@ -201,6 +208,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="processingTime"
                   id="processingTime"
+                  required="true"
                 />
               </div>
               {/* stock Status  */}
@@ -214,6 +222,7 @@ const AddProduct = () => {
                   className="input input-bordered rounded-2xl"
                   name="stockStatus"
                   id="stockStatus"
+                  required="true"
                 />
               </div>
               {/* email */}
@@ -228,6 +237,7 @@ const AddProduct = () => {
                   name="email"
                   id="email"
                   defaultValue={user.email}
+                  required="true"
                 />
               </div>
               {/* name */}
@@ -242,6 +252,7 @@ const AddProduct = () => {
                   name="name"
                   id="name"
                   defaultValue={user.displayName}
+                  required="true"
                 />
               </div>
               {/* btn */}
