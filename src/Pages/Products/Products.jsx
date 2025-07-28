@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import { Bounce } from "react-awesome-reveal";
 import useAuth from "../../hooks/useAuth";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Products = () => {
   const { loading } = useAuth();
@@ -23,7 +24,7 @@ const Products = () => {
   return (
     <div>
       {/* section title */}
-      <div className="text-center flex flex-col items-center">
+      <div className="flex flex-col items-center text-center">
         <h1 className="text-4xl font-bold sm:w-[40%] mb-6">
           Explore Our Art Items Collection!
         </h1>
@@ -34,9 +35,9 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 ">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 ">
         {products.map((product) => (
-          <Product key={product._id} product={product}></Product>
+          <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </div>
     </div>

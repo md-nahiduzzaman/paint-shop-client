@@ -87,7 +87,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <Link to="/" className="text-2xl font-black">
+          <Link to="/" className="text-2xl font-black hidden">
             PaintShop
           </Link>
         </div>
