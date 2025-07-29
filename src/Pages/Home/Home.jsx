@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
 import QuoteSection from "../../components/QuoteSection/QuoteSection";
 import FeaturedProducts from "../../components/FreaturedProducts/FreaturedProducts";
+import CountdownBanner from "../../components/CountdownBanner/CountdownBanner";
+import ValueProps from "../../components/ValueProps";
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-white">
       {/* <div>
         <Banner></Banner>
       </div> */}
@@ -28,8 +30,19 @@ const Home = () => {
         <QuoteSection></QuoteSection>
       </div>
 
-      <div className="pt-28 ">
+      <div>
+        <FeaturedProducts></FeaturedProducts>
+      </div>
+
+      <div>
+        <CountdownBanner></CountdownBanner>
+      </div>
+
+      {/* <div className="pt-28 ">
         <Products></Products>
+      </div> */}
+      <div>
+        <ValueProps></ValueProps>
       </div>
 
       <div className="mb-12 pt-28">

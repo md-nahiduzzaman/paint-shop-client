@@ -66,9 +66,7 @@ const ProductCard = ({ product }) => {
         <h3 className="text-lg font-semibold text-gray-800">
           {product.item_name}
         </h3>
-        <p className="text-gray-500">
-          from ${product.price?.toFixed(2) || "N/A"}
-        </p>
+        <p className="text-gray-500">from ${product.price}</p>
       </div>
     </Link>
   );
@@ -80,7 +78,7 @@ ProductCard.propTypes = {
     _id: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     item_name: PropTypes.string.isRequired,
-    price: PropTypes.number,
+    price: PropTypes.string.isRequired,
   }).isRequired,
 };
 
