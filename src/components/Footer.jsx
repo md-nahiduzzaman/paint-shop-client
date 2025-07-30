@@ -1,66 +1,162 @@
+import React from "react";
+import { Link } from "react-router-dom";
+// Importing all necessary icons
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+  FaCcVisa,
+  FaCcMastercard,
+  FaCcAmex,
+  FaCcPaypal,
+  FaCcDiscover,
+} from "react-icons/fa";
+import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+
+// Data for footer links remains organized for easy maintenance.
+const footerData = {
+  support: [
+    { name: "Contact", href: "/contact" },
+    { name: "Returns", href: "/returns" },
+    { name: "Terms & Conditions", href: "/terms" },
+    { name: "FAQ", href: "/faq" },
+    { name: "About us", href: "/about" },
+  ],
+  browse: [
+    { name: "All products", href: "/shop" },
+    { name: "Bestsellers", href: "/collections/bestsellers" },
+    { name: "Theme features", href: "/features" },
+    { name: "Blog", href: "/blog" },
+  ],
+};
+
+// Array for payment icons
+const paymentIcons = [
+  <FaCcVisa key="visa" size={28} />,
+  <FaCcMastercard key="mastercard" size={28} />,
+  <FaCcAmex key="amex" size={28} />,
+  <FaCcPaypal key="paypal" size={28} />,
+  <FaCcDiscover key="discover" size={28} />,
+];
+
 const Footer = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <>
-      <div className="bg-neutral text-neutral-content mt-24">
-        <div className="container mx-auto">
-          <footer className="footer p-10 bg-neutral text-neutral-content">
-            <aside>
-              <h1 className="text-4xl font-bold">PaintShop</h1>
-              <hr />
-              <p>
-                PaintShop Industries Ltd.
-                <br />
-                321 Elm Street, Springfield, <br />
-                email@example.com <br />
-                555-123-4567
-              </p>
-              <hr />
-              <div className="">
-                <p> Copyright © 2024 - All right reserved </p>
-              </div>
-            </aside>
-            <nav>
-              <h6 className="footer-title">Social</h6>
-              <div className="grid grid-flow-col gap-4">
-                <a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
+    <footer className="bg-white">
+      <div className="container relative px-6 mx-auto">
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 gap-10 py-16 text-sm md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h4 className="mb-4 font-semibold text-gray-900">Support</h4>
+            <ul className="space-y-3">
+              {footerData.support.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-600 hover:text-black hover:underline"
                   >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                  </svg>
-                </a>
-                <a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="mb-4 font-semibold text-gray-900">Browse</h4>
+            <ul className="space-y-3">
+              {footerData.browse.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-600 hover:text-black hover:underline"
                   >
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                  </svg>
-                </a>
-                <a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                  </svg>
-                </a>
-              </div>
-            </nav>
-          </footer>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="mb-4 font-semibold text-gray-900">About</h4>
+            <p className="leading-relaxed text-gray-600">
+              This is a demonstration of the Venue theme for Shopify. You can
+              buy beautiful images like these from our friends over at{" "}
+              <a href="#" className="underline hover:text-black">
+                Lisa Russo Fine Art
+              </a>
+              .
+            </p>
+          </div>
+          <div>
+            <h4 className="mb-4 font-semibold text-gray-900">Contact</h4>
+            <a
+              href="mailto:store@email.com"
+              className="text-gray-600 hover:text-black hover:underline"
+            >
+              store@email.com
+            </a>
+            <div className="flex items-center gap-4 mt-4">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaFacebookF size={20} />
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaInstagram size={20} />
+              </a>
+              <a
+                href="#"
+                aria-label="TikTok"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaTiktok size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll to Top Button */}
+        <button
+          onClick={handleScrollToTop}
+          className="absolute flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-600 rounded-full shadow-lg bottom-10 right-6 hover:bg-gray-700"
+          aria-label="Scroll to top"
+        >
+          <IoChevronUp size={24} />
+        </button>
+      </div>
+
+      {/* Bottom bar of the footer */}
+      <div className="border-t border-gray-200">
+        <div className="container flex flex-col items-center justify-between gap-4 px-6 py-6 mx-auto text-xs text-gray-500 md:flex-row">
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
+            <div className="flex items-center gap-1 cursor-pointer hover:text-black">
+              <span>United Kingdom (USD $)</span>
+              <IoChevronDown size={16} />
+            </div>
+            <div className="flex items-center gap-2">
+              {paymentIcons.map((icon) => icon)}
+            </div>
+          </div>
+
+          <p>
+            Powered by Shopify &copy; {new Date().getFullYear()}, Venue Theme
+            Store
+          </p>
         </div>
       </div>
-    </>
+    </footer>
   );
 };
 

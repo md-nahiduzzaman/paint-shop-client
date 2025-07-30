@@ -1,16 +1,17 @@
-import Banner from "../../components/Banner/Banner";
 import EmailSubscription from "../../components/EmailSubscription/EmailSubscription";
 import Gallery from "../../components/Gallery/Gallery";
-import Countries from "../Countries/Countries";
+
 import ArtCategories from "../ArtCategories/ArtCategories";
 
-import Products from "../Products/Products";
 import { useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
 import QuoteSection from "../../components/QuoteSection/QuoteSection";
 import FeaturedProducts from "../../components/FreaturedProducts/FreaturedProducts";
 import CountdownBanner from "../../components/CountdownBanner/CountdownBanner";
 import ValueProps from "../../components/ValueProps";
+import About from "../../components/About";
+import PhotoGallery from "../../components/PhotoGallery";
+import Newsletter from "../../components/Newsletter";
 
 const Home = () => {
   useEffect(() => {
@@ -45,17 +46,25 @@ const Home = () => {
         <ValueProps></ValueProps>
       </div>
 
-      <div className="mb-12 pt-28">
-        <EmailSubscription></EmailSubscription>
+      <div>
+        <About></About>
       </div>
 
-      <div className="mb-12 pt-28">
+      <div>
+        <PhotoGallery></PhotoGallery>
+      </div>
+
+      <div>
+        <Newsletter></Newsletter>
+      </div>
+
+      {/* <div className="mb-12 pt-28">
         <ArtCategories></ArtCategories>
-      </div>
+      </div> */}
 
-      <div className="mb-12 pt-28">
+      {/* <div className="mb-12 pt-28">
         <Gallery></Gallery>
-      </div>
+      </div> */}
     </div>
   );
 };
